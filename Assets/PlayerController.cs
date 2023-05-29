@@ -32,17 +32,14 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetInteger("status", 2);
         }
-
+        
         if (Input.GetKeyDown(KeyCode.F))
         {
             Vector3 newPositon = new Vector3(transform.position.x + 1,transform.position.y,
                 transform.position.z);
             Instantiate(skill, newPositon, Quaternion.identity);
         }
-
-      
-
-
+        
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * 6f * Time.deltaTime);
