@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator anim;
 
+    public GameObject skill;
     // Start is called before the first frame update
     private Rigidbody2D rigi;
     void Start()
@@ -30,6 +31,13 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.A))
         {
             anim.SetInteger("status", 2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Vector3 newPositon = new Vector3(transform.position.x + 1,transform.position.y,
+                transform.position.z);
+            Instantiate(skill, newPositon, Quaternion.identity);
         }
 
       
